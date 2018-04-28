@@ -3,6 +3,7 @@ use core::ops::{Deref, DerefMut};
 
 const PAGE_SIZE: u64 = 4096;
 
+#[derive(Clone)]
 #[repr(C)]
 pub struct MemoryMap {
     entries: [MemoryRegion; 32],
